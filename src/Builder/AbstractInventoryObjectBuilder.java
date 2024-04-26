@@ -1,6 +1,7 @@
 package src.Builder;
+import src.InventoryObjects.InventoryObjectIF;
 
-public abstract class AbstractInventoryObjectBuilder implements InventoryObjectBuilderIF{
+public abstract class AbstractInventoryObjectBuilder {
     /**
      * AbstractInventoryObjectBuilder.java
      * Abstract class used in the builder pattern.
@@ -11,12 +12,9 @@ public abstract class AbstractInventoryObjectBuilder implements InventoryObjectB
      *
      */
 
-    private static AbstractInventoryObjectBuilder instance;
-
     public static AbstractInventoryObjectBuilder getInstance(){
-        if(instance == null){
-            //instance = new AbstractInventoryObjectBuilder();
-        }
-        return instance;
+       return new InventoryObjectBuilder();
     }
+
+    public abstract InventoryObjectIF getInventoryObject(String object);
 }
