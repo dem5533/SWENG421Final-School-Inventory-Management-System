@@ -1,5 +1,4 @@
 package src.InventoryObjects;
-
 import src.Observer.ObserverIF;
 
 public abstract class ObservableInventoryObject implements InventoryObjectIF {
